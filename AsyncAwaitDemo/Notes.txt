@@ -1,0 +1,38 @@
+﻿Synchronous---- Till the previous task deosn't complete the next task doesn't 
+start.
+
+Querying my database, result thousands of rows, 
+the thread is stuck till the process completes.
+
+Asynchronous--- run other task simultaneously, till the previous task completes.
+
+async: the long running method is marked with "async".(Asynchronous)
+
+
+await: pauses the execution of the first method until the awaited task completes, 
+without blocking the thread.
+
+------------------------------------------------------------
+
+1) If method has a return type other than Void (int,string,float,doube, List,Dictionary,Stack)
+then that method is said to be returning ""Task"" with return type,
+async keyword is used before the ""Task"" word.
+
+public async Task<T> NameOfMethod(){}
+public async Task<List<Employees>> M1()---> ie method m1 is returning a int
+{
+//code
+
+}
+
+public async Task M1()----> ie method returning void
+{
+
+}
+
+2) await: is used inside an async method
+async method  means it runs in the background without blocking
+the main thread of the application. It allows the use of ""await"".
+
+
+
